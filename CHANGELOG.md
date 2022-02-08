@@ -1,3 +1,6 @@
+# 2.1.2
+- Request api verify key was extended
+
 # 2.1.1
 - Do not delete cross-sellings after uninstall
 

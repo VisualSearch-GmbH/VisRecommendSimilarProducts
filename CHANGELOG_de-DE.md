@@ -1,3 +1,6 @@
+# 2.1.2
+- Api verify key Abfrage wurde erweitert
+
 # 2.1.1
 - Cross-Sellings nach Deinstallation nicht löschen
 

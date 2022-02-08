@@ -69,13 +69,13 @@ class ApiRequest
     public function verify($apiKey): string
     {
         // Create a connection
-        $url = 'https://api.visualsearch.wien/api_key_verify_similar';
+        $url = 'https://api.visualsearch.wien/api_key_verify';
         $ch = curl_init($url);
 
         // Setting our options
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json',
-            'Vis-API-KEY:'.$apiKey));
+            'Vis-API-KEY:'.$apiKey, 'Vis-SOLUTION-TYPE: similar'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         try {
