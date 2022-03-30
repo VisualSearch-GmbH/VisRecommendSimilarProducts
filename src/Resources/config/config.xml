@@ -37,6 +37,8 @@
             <placeholder lang="de-DE">Ähnliche Produktempfehlungen</placeholder>
             <helpText>Define the display name of the cross-selling tab</helpText>
             <helpText lang="de-DE">Definieren Sie den Anzeigenamen des Cross-Sellings</helpText>
+            <required>true</required>
+            <defaultValue>VisualSearch</defaultValue>
         </input-field>
 
         <input-field type="checkbox">

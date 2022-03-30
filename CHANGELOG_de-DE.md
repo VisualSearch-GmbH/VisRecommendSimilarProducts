@@ -1,3 +1,6 @@
+# 2.1.3
+- Name der Cross-Selling ist erforderlich
+
 # 2.1.2
 - Api verify key Abfrage wurde erweitert
 
