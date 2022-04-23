@@ -1,3 +1,6 @@
+# 2.1.4
+- Suggest only in stock products
+
 # 2.1.3
 - Name of cross-selling is required
 

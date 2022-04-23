@@ -1,3 +1,6 @@
+# 2.1.4
+- Nur Produkte vorschlagen, die auf Lager sind
+
 # 2.1.3
 - Name der Cross-Selling ist erforderlich
 
