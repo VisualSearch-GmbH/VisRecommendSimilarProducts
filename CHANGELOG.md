@@ -1,3 +1,6 @@
+# 2.1.5
+- Configure layout of product detail page
+
 # 2.1.4
 - Suggest only in stock products
 

@@ -1,3 +1,6 @@
+# 2.1.5
+- Layout der Produktdetailseite konfigurieren
+
 # 2.1.4
 - Nur Produkte vorschlagen, die auf Lager sind
 
