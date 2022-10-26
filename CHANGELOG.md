@@ -1,3 +1,6 @@
+# 2.1.6
+- Transmit names of categories
+
 # 2.1.5
 - Configure layout of product detail page
 

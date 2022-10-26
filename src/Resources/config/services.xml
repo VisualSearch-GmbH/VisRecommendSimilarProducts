@@ -22,17 +22,6 @@
             <tag name="shopware.snippet.file" priority="100"/>
         </service>
 
-        <service id="Vis\RecommendSimilarProducts\ScheduledTask\VisProductTask">
-            <tag name="shopware.scheduled.task" />
-        </service>
-
-        <service id="Vis\RecommendSimilarProducts\ScheduledTask\VisProductTaskHandler">
-            <argument type="service" id="scheduled_task.repository" />
-            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService" />
-            <argument type="service" id="service_container"/>
-            <tag name="messenger.message_handler" />
-        </service>
-
         <service id="Vis\RecommendSimilarProducts\Storefront\Controller\RecommendationsController" public="true">
             <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
             <call method="setContainer">

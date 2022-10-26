@@ -1,3 +1,6 @@
+# 2.1.6
+- Namen der Kategorien übermitteln
+
 # 2.1.5
 - Layout der Produktdetailseite konfigurieren
 

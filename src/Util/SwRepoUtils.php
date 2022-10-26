@@ -98,6 +98,7 @@ class SwRepoUtils
     {
         // only active products
         $criteria->addFilter(new EqualsFilter('active', 1));
+        $criteria->addAssociation('categories');
 
         // search repository
         $productsSearch = $repository->search($criteria, \Shopware\Core\Framework\Context::createDefaultContext());
@@ -112,15 +113,19 @@ class SwRepoUtils
 
         // Get all products
         foreach ($productEntities as $key => $productEntity) {
-
             $categories = $productEntity->getCategoryTree();
 
             // has name, image and category
-            if ( (!empty($productEntity->getName())) && ($productEntity->getCover()) && (!empty($categories)) ) {
-
+            if ((!empty($productEntity->getName())) && ($productEntity->getCover()) && (!empty($categories))) {
                 // is in stock
-                if($productEntity->getAvailableStock() > 0) {
-                    array_push($products, [$key, $productEntity->getName(), $productEntity->getCategoryTree(), '', $productEntity->getCover()->getMedia()->getUrl()]);
+                if ($productEntity->getAvailableStock() > 0) {
+	                $categoriesList = [];
+	                if (!empty($categoriesElements = $productEntity->getCategories()->getElements())) {
+	                    foreach ($categoriesElements as $categoryElement) {
+	                        $categoriesList = array_merge($categoriesList, $categoryElement->getBreadcrumb());
+	                    }
+	                }
+                    $products[] = [$key, $productEntity->getName(), $categories, $categoriesList, $productEntity->getCover()->getMedia()->getUrl()];
                 }
             }
         }
