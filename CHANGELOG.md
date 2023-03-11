@@ -1,3 +1,6 @@
+# 2.1.7
+- Bug with categories fixed
+
 # 2.1.6
 - Transmit names of categories
 

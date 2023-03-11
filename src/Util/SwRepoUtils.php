@@ -72,6 +72,10 @@ class SwRepoUtils
         foreach ($productEntities as $key => $productEntity) {
             $categories = $productEntity->getCategoryTree();
 
+            if (is_null($categories)) {
+                continue;
+            }
+
             if ((!empty($productEntity->getName())) && ($productEntity->getCover()) && (count($categories) > 1)) {
                 $perform = true;
                 if (empty($productEntity->getCrossSellings())) {
