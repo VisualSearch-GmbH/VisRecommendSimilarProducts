@@ -15,7 +15,7 @@ use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
 class SwHosts
 {
     /**
-     * @var salesChannelRepository
+     * @var EntityRepositoryInterface
      */
     private $salesChannelRepository;
 
